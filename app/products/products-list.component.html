@@ -35,14 +35,14 @@
                     <th>Ranking</th>
                 </tr>
             </thead>
-                <tr *ngFor='let product of products | productFilter: listarFiltro'>
+                <tr *ngFor='let product of products |  : listarFiltro'>
                     <td>
                         <img *ngIf="mostrarImagen" [src]='product.imagenURL' 
                         [title]="product.nombreProducto"
                         [style.width.px]='imagenAncho'
                         [style.margin.px]='imagenMargen'>
                     </td>
-                    <td>{{ product.nombreProducto }}</td>
+                    <td>{{ product.productName }}</td>
                     <td>{{ product.idProducto }}</td>
                     <td>{{ product.fechaPublicacion }}</td>
                     <td>{{ product.precio |  currency:'USD':true:'1.2-2' }}</td>

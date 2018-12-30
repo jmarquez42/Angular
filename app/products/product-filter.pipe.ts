@@ -11,7 +11,7 @@ export class ProductFilterPipe implements PipeTransform {
         console.log(filterString);
         
         return filterString? 
-            value.filter((product: IProduct) => product.nombreProducto.toLowerCase().indexOf(filterString) != -1) 
+            value.filter((product: IProduct) => product.productName.toLowerCase().indexOf(filterString) != -1) 
             : value;
     }
 
