@@ -35,7 +35,7 @@
                     <th>Ranking</th>
                 </tr>
             </thead>
-                <tr *ngFor='let product of products |  : listarFiltro'>
+                <tr *ngFor='let product of products | productFilter: listarFiltro'>
                     <td>
                         <img *ngIf="mostrarImagen" [src]='product.imagenURL' 
                         [title]="product.nombreProducto"
